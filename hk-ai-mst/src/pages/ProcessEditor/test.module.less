@@ -1,0 +1,161 @@
+@import '../../styles/variable.less';
+@import '../../styles/mixins.less';
+@border-color: #E6E9ED;
+@asideWidth: 8px*30;
+.processEditor {
+  overflow: hidden;
+  user-select: none;
+  :global {
+    .ant-card-head {
+      background-color: rgb(234, 238, 242);
+    }
+    .ant-card-body {
+      padding: @gutter;
+      background-color: rgb(247, 249, 251);
+      // height: 80vh;
+    }
+  }
+}
+
+.title3 {
+  margin: 0;
+  padding: @gutter;
+  border-bottom: 1px solid @border-color;
+}
+
+.ggEditor {
+  // overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: @gutter;
+  border-bottom: 1px solid @border-color;
+}
+
+.title {
+  margin-left: @gutter;
+  margin-bottom: 0;
+  .text-overflow();
+}
+
+.main {
+  height: 80vh;
+  display: flex;
+}
+
+.asideLeft {
+  flex-shrink: 0;
+  width: 250px;
+  :global {
+    .ant-card {
+      height: 100%;
+      .ant-card-body {
+        height: calc(~"100% - 57px");
+        overflow-x: scroll;
+        overflow-y: auto;
+        .ant-menu-item {
+          overflow: visible;
+        }
+      }
+     // 滚动条高宽
+     .ant-card-body::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      // 滚动条里面小方块
+      .ant-card-body::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      // 滚动条里面轨道
+      .ant-card-body::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    }
+  }
+}
+
+.content {
+  width: calc(~"100% - 580px");
+}
+
+.asideRight {
+  flex-shrink: 0;
+  width: 330px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.attributeConfigurationPanel {
+  width: 330px;
+  height: calc(~"100% - 300px");
+  :global {
+    .ant-card {
+      height: 100%;
+      .ant-card-body {
+        height: calc(~"100% - 57px");
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      // 滚动条高宽
+     .ant-card-body::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      // 滚动条里面小方块
+      .ant-card-body::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      // 滚动条里面轨道
+      .ant-card-body::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    }
+    
+  }
+}
+
+.thumbnailPanel {
+  width: 330px;
+  height: 300px;
+  :global{
+    .ant-card-body{
+      height: 244px;
+      overflow-y: auto;
+    }
+    // 滚动条高宽
+    .ant-card-body::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    // 滚动条里面小方块
+    .ant-card-body::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      background: rgba(0,0,0,0.2);
+    }
+    // 滚动条里面轨道
+    .ant-card-body::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      border-radius: 0;
+      background: rgba(0,0,0,0.1);
+    }
+  }
+}
+
+.flow {
+  // 必须有明确高度和宽度canvas才能在window resize的时候获得正确的大小
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,183 @@
+{
+  "data": [{
+      "key": "rngSeed",
+      "name": "rngSeed",
+      "value": "123",
+      "type": "input",
+      "placeholder": "random number seed for reproducibility"
+    },{
+      "key": "numEpochs",
+      "name": "numEpochs",
+      "value": "123",
+      "type": "input",
+      "placeholder": "number of epochs to perform"
+    },
+    {
+      "key": "activation",
+      "name": "activation",
+      "value": "",
+      "data": {
+        "CUBE": "CUBE",
+        "ELU": "ELU",
+        "HARDSIGMOID": "HARDSIGMOID",
+        "HARDTANH": "HARDTANH",
+        "IDENTITY": "IDENTITY",
+        "LEAKYRELU": "LEAKYRELU",
+        "RATIONALTANH": "RATIONALTANH",
+        "RELU": "RELU",
+        "RELU6": "RELU6",
+        "RRELU": "RRELU",
+        "SIGMOID": "SIGMOID",
+        "SOFTMAX": "SOFTMAX",
+        "SOFTPLUS": "SOFTPLUS",
+        "SOFTSIGN": "SOFTSIGN",
+        "TANH": "TANH",
+        "RECTIFIEDTANH": "RECTIFIEDTANH",
+        "SELU": "SELU",
+        "SWISH": "SWISH",
+        "THRESHOLDEDRELU": "THRESHOLDEDRELU"
+      },
+      "type": "combobox",
+      "placeholder": ""
+    },
+    {
+      "key": "weightInit",
+      "name": "weightInit",
+      "value": "",
+      "data": {
+        "DISTRIBUTION": "DISTRIBUTION",
+        "ZERO": "ZERO",
+        "ONES": "ONES",
+        "SIGMOID_UNIFORM": "SIGMOID_UNIFORM",
+        "NORMAL": "NORMAL",
+        "LECUN_NORMAL": "LECUN_NORMAL",
+        "UNIFORM": "UNIFORM",
+        "XAVIER": "XAVIER",
+        "XAVIER_UNIFORM": "XAVIER_UNIFORM",
+        "XAVIER_FAN_IN": "XAVIER_FAN_IN",
+        "XAVIER_LEGACY": "XAVIER_LEGACY",
+        "RELU": "RELU",
+        "RELU_UNIFORM": "RELU_UNIFORM",
+        "IDENTITY": "IDENTITY",
+        "LECUN_UNIFORM": "LECUN_UNIFORM",
+        "VAR_SCALING_NORMAL_FAN_IN": "VAR_SCALING_NORMAL_FAN_IN",
+        "VAR_SCALING_NORMAL_FAN_AVG": "VAR_SCALING_NORMAL_FAN_AVG",
+        "VAR_SCALING_NORMAL_FAN_OUT": "VAR_SCALING_NORMAL_FAN_OUT",
+        "VAR_SCALING_UNIFORM_FAN_IN": "VAR_SCALING_UNIFORM_FAN_IN",
+        "VAR_SCALING_UNIFORM_FAN_OUT": "VAR_SCALING_UNIFORM_FAN_OUT",
+        "VAR_SCALING_UNIFORM_FAN_AVG": "VAR_SCALING_UNIFORM_FAN_AVG"
+      },
+      "type": "combobox",
+      "placeholder": ""
+    }, {
+      "key": "learningRate",
+      "name": "learningRate",
+      "value": "0.0015",
+      "type": "input",
+      "placeholder": "learning rate"
+    },
+    {
+      "key": "updater",
+      "name": "updater",
+      "value": "",
+      "data": {
+        "Nesterovs": "Nesterovs",
+        "Nadam": "Nadam"
+      },
+      "children": [{
+          "key": "momentum",
+          "name": "momentum",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "Nesterovs"
+        },
+        {
+          "key": "beta1",
+          "name": "beta1",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "Nadam"
+        },
+        {
+          "key": "beta2",
+          "name": "beta2",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "Nadam"
+        },
+        {
+          "key": "epsilon",
+          "name": "epsilon",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "Nadam"
+        }
+      ],
+      "type": "combobox",
+      "placeholder": ""
+    },
+    {
+      "key": "l2",
+      "name": "l2",
+      "value": "",
+      "type": "input",
+      "placeholder": ""
+    },{
+      "key": "InputType",
+      "name": "InputType",
+      "value": "",
+      "data": {
+        "convolutionalFlat": "convolutionalFlat",
+        "convolutional": "convolutional",
+		"convolutional3D":"convolutional3D"
+      },
+      "children": [{
+          "key": "height",
+          "name": "height",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "convolutionalFlat,convolutional,convolutional3D"
+        },
+        {
+          "key": "width",
+          "name": "width",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "convolutionalFlat,convolutional,convolutional3D"
+        },
+        {
+          "key": "depth",
+          "name": "depth",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "convolutionalFlat,convolutional,convolutional3D"
+        },
+        {
+          "key": "channels",
+          "name": "channels",
+          "value": "",
+          "type": "input",
+          "placeholder": "",
+          "hide": true,
+          "parent": "convolutional3D"
+        }
+      ],
+      "type": "combobox",
+      "placeholder": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+@import '../../styles/variable.less';
+@import '../../styles/mixins.less';
+
+.pageNotFound {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+  background-color: @primary-color;
+  line-height: 1.2;
+}
+
+.title {
+  margin-bottom: 0;
+  text-align: center;
+  letter-spacing: 32px;
+  color: #fff;
+  font-size: 88px;
+  .lastLetter {
+    letter-spacing: normal;
+  }
+}
+
+.tip {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.backHome {
+  display: block;
+  padding: 8px 40px;
+  transition: transform .2s;
+  color: #fff;
+  border: 2px solid #fff;
+  &:hover {
+    transform: scale(1.2);
+    color: inherit;
+  }
+}
+
+@media (min-width: @md) {
+  .title {
+    font-size: 240px;
+  }
+}

@@ -1,0 +1,44 @@
+.text-hide() {
+  // 隐藏文字
+  vertical-align: middle;
+  color: transparent;
+  border: 0;
+  background-color: transparent;
+  text-shadow: none;
+  font: ~"0/0" a;
+}
+
+.text-overflow() {
+  // 文字截取
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bg-contain() {
+  // 背景图片最大边适应容器
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.bg-x(@url) {
+  // 根据分辨率选择图片
+  background-image: url("@{url}@2x.png");
+  @media (min-device-pixel-ratio: 3) {
+    background-image: url("@{url}@3x.png");
+  }
+}
+
+.a-reset-color(@color: inherit, @color-hover: @color) {
+  // 统一a标签文字颜色
+  color: @color;
+  &:hover {
+    color: @color-hover;
+  }
+}
+.a-reset(@color: inherit, @color-hover: @color) {
+  // 重置a标签样式
+  .a-reset-color(@color, @color-hover);
+  text-decoration: none;
+}

@@ -1,0 +1,111 @@
+{
+  "data": {
+    "columns": [
+      {
+        "title": "状态",
+        "dataIndex": "state",
+        "key": "state"
+      },
+      {
+        "title": "名称",
+        "dataIndex": "data_name",
+        "key": "data_name"
+      },
+      {
+        "title": "类型",
+        "dataIndex": "type",
+        "key": "type"
+      },
+      {
+        "title": "是否存储",
+        "dataIndex": "is_store",
+        "key": "is_store"
+      },
+      {
+        "title": "存储地址",
+        "dataIndex": "store_path",
+        "key": "store_path"
+      },
+      {
+        "title": "创建时间",
+        "dataIndex": "create_time",
+        "key": "create_time"
+      },
+      {
+        "title": "更新时间",
+        "dataIndex": "update_time",
+        "key": "update_time"
+      },
+      {
+        "title": "Action",
+        "key": "operation"
+      }
+    ],
+    "dataSource": [
+      {
+        "key": "1",
+        "state": "已完成",
+        "data_name": "数据1",
+        "type": "类型1",
+        "is_store": "是",
+        "store_path": "地址1",
+        "create_time": "2018-10-24",
+        "update_time": "2018-10-24"
+      },
+      {
+        "key": "2",
+        "state": "未配置",
+        "data_name": "数据2",
+        "type": "类型2",
+        "is_store": "是",
+        "store_path": "地址2",
+        "create_time": "2018-10-24",
+        "update_time": "2018-10-24"
+      },
+      {
+        "key": "3",
+        "state": "已验证",
+        "data_name": "数据3",
+        "type": "类型3",
+        "is_store": "否",
+        "store_path": "地址3",
+        "create_time": "2018-10-24",
+        "update_time": "2018-10-24"
+      },
+      {
+        "key": "4",
+        "state": "已验证",
+        "data_name": "数据3",
+        "type": "类型3",
+        "is_store": "否",
+        "store_path": "地址3",
+        "create_time": "2018-10-24",
+        "update_time": "2018-10-24"
+      },
+      {
+        "key": "5",
+        "state": "已验证",
+        "data_name": "数据3",
+        "type": "类型3",
+        "is_store": "否",
+        "store_path": "地址3",
+        "create_time": "2018-10-24",
+        "update_time": "2018-10-24"
+      },
+      {
+        "key": "6",
+        "state": "已验证",
+        "data_name": "数据3",
+        "type": "类型3",
+        "is_store": "否",
+        "store_path": "地址3",
+        "create_time": "2018-10-24",
+        "update_time": "2018-10-24"
+      }
+    ]
+  }
+}
+
+
+
+

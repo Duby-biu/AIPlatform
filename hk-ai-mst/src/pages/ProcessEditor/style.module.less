@@ -1,0 +1,122 @@
+@import '../../styles/variable.less';
+@import '../../styles/mixins.less';
+@border-color: #E6E9ED;
+@asideWidth: 8px*30;
+.processEditor {
+  overflow: hidden;
+  user-select: none;
+  :global {
+    .ant-card-head {
+      background-color: rgb(234, 238, 242);
+    }
+    .ant-card-body {
+      padding: @gutter;
+      background-color: rgb(247, 249, 251);
+      height: 80vh;
+    }
+  }
+}
+
+.title3 {
+  margin: 0;
+  padding: @gutter;
+  border-bottom: 1px solid @border-color;
+}
+
+.ggEditor {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: @gutter;
+  border-bottom: 1px solid @border-color;
+}
+
+.title {
+  margin-left: @gutter;
+  margin-bottom: 0;
+  .text-overflow();
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.asideLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  // width: 0;
+  border-right: 1px solid @border-color;
+  :global {
+    .ant-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+    .ant-card-body {
+      padding: 0;
+      flex: 1;
+      // overflow-y: auto;
+      .ant-menu-item {
+        overflow: visible;
+      }
+    }
+  }
+}
+
+.content {
+  // 这里不能百分数...
+  @media (max-width: 1200px)  {
+    width: 50vw;
+  }
+  @media (min-width: 1200px)  {
+    width: 60vw;
+  }
+}
+
+.asideRight {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  border-left: 1px solid @border-color;
+}
+
+.attributeConfigurationPanel {
+  flex: 1;
+  height: 0;
+  :global {
+    .ant-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+    .ant-card-body {
+      flex: 1;
+      overflow-y: auto;
+    }
+  }
+}
+
+.thumbnailPanel {
+  height: 240px;
+  :global{
+    .ant-card-body{
+      height: 183px;
+      overflow-y: auto;
+    }
+  }
+}
+
+.flow {
+  // 必须有明确高度和宽度canvas才能在window resize的时候获得正确的大小
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,53 @@
+@import '../../../../styles/variable.less';
+@import '../../../../styles/mixins.less';
+:global {
+  .hideDetailForm {
+    display: none;
+  }
+
+  .showDetailForm {
+    display: block;
+  }
+}
+
+.iconFormItem {
+  position: absolute;
+  z-index: 99;
+  .iconWrapper {
+    background-color: #fff;
+    border: 1px #aaa solid;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  // 滚动条高宽
+  .iconWrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  // 滚动条里面小方块
+  .iconWrapper::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+  }
+  // 滚动条里面轨道
+  .iconWrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+  }
+  i svg {
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+  }
+  i svg:hover,
+  img:hover {
+    border: #fff 1px solid;
+  }
+}

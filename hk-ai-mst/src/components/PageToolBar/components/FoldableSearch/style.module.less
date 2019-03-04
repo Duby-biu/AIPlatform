@@ -1,0 +1,31 @@
+@import '../../../../styles/variable.less';
+@import '../../../../styles/mixins.less';
+.foldableSearch {
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  cursor: pointer;
+}
+
+.form {
+  margin-bottom: 0;
+  color: inherit;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-select-auto-complete.ant-select {
+      &,
+      &:hover,
+      &.ant-select-focused {
+        .ant-input {
+          border-color: transparent;
+          border-bottom-color: currentColor;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

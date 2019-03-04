@@ -1,0 +1,70 @@
+@import '../../../../styles/variable.less';
+@import '../../../../styles/mixins.less';
+.iconAlignTop {
+  transform: rotate(90deg);
+}
+
+.iconAlignBottom {
+  transform: rotate(-90deg);
+}
+
+.processEditorToolBar {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 18px;
+  :global {
+    .command i {
+      // cursor: pointer;
+      // display: inline-block;
+      // padding: 0.5*@gutter;
+      // text-align: center;
+      // border: 1px solid #FFFFFF;
+      // &:hover {
+      //   border: 1px solid #ccc;
+      // }
+      svg {
+        display: inline;
+      }
+    } // .disable i {
+    //   cursor: auto;
+    //   color: rgba(0, 0, 0, 0.25);
+    //   &:hover {
+    //     border: 1px solid transparent;
+    //   }
+    // }
+    .ant-btn {
+      margin: 0 .5*@gutter;
+      padding: 0 @gutter;
+      font-size: inherit;
+    }
+    .disable {
+      .ant-btn {
+        color: rgba(0, 0, 0, 0.25);
+        border-color: #d9d9d9;
+        background-color: #f5f5f5;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-shadow: none;
+        cursor: not-allowed;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .ant-divider {
+      height: .7em;
+      color: inherit;
+      background-color: #ccc;
+      font-size: inherit;
+    }
+  }
+}
+
+.tooltip {
+  :global {
+    .ant-tooltip-inner {
+      font-size: 12px;
+    }
+  }
+}

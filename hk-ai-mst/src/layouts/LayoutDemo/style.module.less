@@ -1,0 +1,14 @@
+@import '../../styles/variable.less';
+@import '../../styles/mixins.less';
+
+.layoutDemo_header {
+  padding-bottom: 6*@gutter;
+  color: #fff;
+  background-color: @primary-color;
+}
+
+@media (min-width: @md) {
+  .layoutDemo_header {
+    padding-bottom: 12*@gutter;
+  }
+}

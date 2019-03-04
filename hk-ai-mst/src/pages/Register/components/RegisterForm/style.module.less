@@ -1,0 +1,61 @@
+@import '../../../../styles/variable.less';
+@import '../../../../styles/mixins.less';
+.registerFormPanel {
+  width: 268px;
+}
+
+.title {
+  margin-top: 9*@gutter;
+  font-size: 16px;
+  color: inherit;
+}
+
+.input {
+  :global {
+    .ant-input {
+      color: @login-form-color;
+      background-color: transparent;
+      border-radius: 0;
+      box-shadow: none;
+      border-color: currentColor;
+    }
+    .anticon {
+      color: @login-form-color;
+    }
+  }
+}
+
+.checkbox {
+  margin-right: @gutter;
+  color: @login-form-color;
+  :global {
+    .ant-checkbox-inner {
+      border-radius: 0;
+      background-color: transparent;
+    }
+  }
+}
+
+.textLink {
+  color: @login-form-color;
+  &:hover {
+    color: @login-form-color;
+    text-decoration: underline;
+  }
+}
+
+.handleRow {
+  display: flex;
+  align-items: center;
+}
+
+.handleButtonCol {
+  flex: 1;
+  margin-right: 2*@gutter;
+}
+
+.handleButton {
+  margin-right: 2*@gutter;
+  color: @login-form-color;
+  border-radius: 16px;
+}

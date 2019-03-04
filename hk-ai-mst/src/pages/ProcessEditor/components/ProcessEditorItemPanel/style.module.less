@@ -1,0 +1,25 @@
+@import '../../../../styles/variable.less';
+@import '../../../../styles/mixins.less';
+
+.processEditorItemPanel {
+  :global {
+    .ant-menu {
+      border: none;
+    }
+    // 非子结点的图标显示控制
+    .iconFolder {
+      display: inline-block;
+    }
+    .iconFolderOpen {
+      display: none;
+    }
+    .ant-menu-submenu-open > .ant-menu-submenu-title {
+      .iconFolder {
+        display: none;
+      }
+      .iconFolderOpen {
+        display: inline-block;
+      }
+    }
+  }
+}

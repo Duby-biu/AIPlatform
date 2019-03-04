@@ -1,0 +1,20 @@
+@import '../../styles/variable.less';
+@import '../../styles/mixins.less';
+.login {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  color: @login-form-color;
+  background-color: @primary-color;
+  background-image: url('../Login/img/starry.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.loginCard {
+  padding: 2*@gutter;
+  background-image: linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgb(0, 0, 0) 100%);
+  box-shadow: -15px 15px 15px rgba(6, 17, 47, .7);
+}
